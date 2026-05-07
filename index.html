@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | OrbitalPay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rawline:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-container">
+<!-- ... outras partes do código acima ... -->
+       <!-- Lado Esquerdo: Imagem e Mensagem -->
+        <section class="branding-side">
+            <div class="image-wrapper">
+                <img src="arte cartoes.png" alt="Arte cartões">
+                <div class="overlay-brand">
+                    <!-- <h1>Orbital<span>Pay</span></h1> -->
+                    <!--<p>Segurança e inovação em cada transação digital.</p> -->
+                </div>
+            </div>
+        </section>
+
+<!-- ... outras partes do código abaixo ... -->
+
+        <!-- Lado Direito: Formulário de Login -->
+        <section class="login-side">
+            <div class="login-card">
+                <h2>Identifique-se no OrbitalPay com:</h2>
+                
+                <div class="input-info">
+                    <span>Número do CPF</span>
+                    <p>Digite seu CPF e senha para acessar sua conta</p>
+                </div>
+
+        <form>
+            <div class="input-group">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" placeholder="Digite seu CPF" required>
+            </div>
+
+    <!-- ADICIONE ESTE BLOCO AQUI -->
+            <div class="input-group">
+                <label for="password">Senha Eletrônica</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="forgot-password">
+                <a href="mudarSenha.html" class="forgot-link">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn-primary">Continuar</button>
+        </form>
+
+                <div class="divider">
+                    <span>Outras opções de identificação</span>
+                </div>
+
+            <ul class="other-options">
+                <li>
+                    <a href="cadastro.html" class="btn-outline">Abra sua conta</a>
+                </li>
+                <li>
+        <button type="button" class="btn-outline">Login com QR Code</button>
+                </li>
+            </ul>
+
+                <footer class="login-footer">
+                    <a href="#">Precisa de ajuda?</a>
+                    <div class="legal-links">
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Privacidade</a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </main>
+    <script src="javascript.js"></script>
+</body>
+</html>

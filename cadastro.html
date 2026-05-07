@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | OrbitalPay</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-container">
+        <section class="branding-side">
+            <div class="image-wrapper">
+                <img src="arte cartoes.png" alt="Arte cartões OrbitalPay">
+            </div>
+        </section>
+
+        <section class="login-side">
+            <div class="login-card">
+                <h2>Crie sua conta OrbitalPay</h2>
+                
+                <div class="input-info">
+                    <span>Informações Pessoais</span>
+                    <p>Preencha os dados abaixo para começar sua jornada digital.</p>
+                </div>
+
+                <form id="registerForm">
+                    <div class="input-group">
+                        <label for="fullName">Nome Completo</label>
+                        <input type="text" id="fullName" placeholder="Ex: João Silva" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" placeholder="(11) 99999-9999" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="nome@exemplo.com" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Criar minha conta</button>
+                </form>
+
+                <div class="divider">
+                    <span>Já possui uma conta?</span>
+                </div>
+
+                <ul class="other-options">
+                    <li>
+                        <a href="index.html" class="btn-outline">Voltar para o Login</a>
+                    </li>
+                </ul>
+
+                <footer class="login-footer">
+                    <div class="legal-links">
+                        <a href="#">Termos de Abertura</a>
+                        <a href="#">Política de Dados</a>
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

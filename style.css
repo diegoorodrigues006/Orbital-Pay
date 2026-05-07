@@ -1,0 +1,342 @@
+/* ==========================================================================
+   VARIÁVEIS GERAIS (:root)
+   Centraliza todas as cores e padrões. Alterar aqui reflete em todo o projeto.
+   ========================================================================== */
+:root {
+    --bg: #f5f7fa;            /* Cor de fundo neutra da página */
+    --surface: #ffffff;       /* Cor de fundo dos cartões (branco) */
+    --primary: #0a3a7f;       /* Azul oficial da marca OrbitalPay */
+    --primary-dark: #001f5c;  /* Azul mais escuro para estados de interação (hover) */
+    --secondary: #00bcd4;     /* Ciano para botões de ação secundária e contornos */
+    --accent-red: #0400ea;    /* Azul elétrico para acentos específicos */
+    --accent-orange: #c0c1e6; /* Lilás suave para fundos ou detalhes */
+    --text: #1a1a1a;          /* Preto suave para textos principais (melhor leitura) */
+    --muted: #666666;         /* Cinza para textos secundários e legendas */
+    --border: #e0e0e0;        /* Cor padrão para bordas e divisores */
+    --light-bg: #f0f4f8;      /* Fundo azulado muito leve para inputs */
+}
+
+/* ==========================================================================
+   RESET E CONFIGURAÇÃO BASE
+   Garante que o comportamento dos elementos seja igual em todos os browsers.
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Padding e borda não aumentam o tamanho do elemento */
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased; /* Torna as fontes mais nítidas no Mac/iOS */
+}
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL
+   Estrutura de tela dividida usando Flexbox.
+   ========================================================================== */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* --- Lado Esquerdo: Branding/Arte --- */
+.branding-side {
+    flex: 1.2; /* Ocupa 60% do espaço */
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    background: linear-gradient(180deg, #e3f2fd 0%, #ffffff 100%);
+    padding: 0;
+}
+
+/* Container da Imagem: Garante que a arte preencha o lado esquerdo perfeitamente */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir a área sem distorcer */
+    display: block;
+}
+
+/* Estilo do título que pode sobrepor a imagem (opcional) */
+.overlay-brand {
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.overlay-brand h1 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Fonte fluida conforme a tela */
+    color: var(--primary);
+}
+
+.overlay-brand h1 span {
+    color: var(--text);
+}
+
+/* --- Lado Direito: Área de Login --- */
+.login-side {
+    flex: 0.8; /* Ocupa 40% do espaço */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary); /* Fundo azul atrás do card branco */
+    padding: 2rem;
+}
+
+/* ==========================================================================
+   CARTÃO DE LOGIN (O Formuário)
+   Design do "quadro" branco centralizado.
+   ========================================================================== */
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08); /* Sombra suave de profundidade */
+}
+
+.login-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+/* Informações de instrução (CPF/Texto de ajuda) */
+.input-info span {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.input-info p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* Espaçamento entre grupos de input */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+/* Campo de Digitação Personalizado */
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #f9fbff;
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efeito ao clicar/focar no campo */
+.input-group input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.12);
+}
+
+/* Botão Principal Azul (Continuar) */
+.btn-primary {
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px); /* Sobe levemente ao passar o mouse */
+}
+
+/* Links de Esqueci Senha */
+.forgot-password {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   DIVISORES E OUTRAS OPÇÕES
+   Organiza os botões secundários abaixo do formulário.
+   ========================================================================== */
+
+/* Linha horizontal com o texto "ou" no meio */
+.divider {
+    position: relative;
+    margin: 2rem 0 1.25rem;
+    text-align: center;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: var(--border);
+    transform: translateY(-50%);
+}
+
+.divider span {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.85rem;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.other-options {
+    list-style: none;
+}
+
+.other-options li + li {
+    margin-top: 0.75rem;
+}
+
+/* Botão de Borda (Abrir Conta / QR Code) */
+.btn-outline {
+    width: 100%;
+    padding: 12px 16px;
+    background: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    border-radius: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(0, 188, 212, 0.12);
+}
+
+/* ==========================================================================
+   FOOTER E LINKS LEGAIS
+   Textos de ajuda e termos no rodapé do card.
+   ========================================================================== */
+.login-footer {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.login-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.legal-links {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.legal-links a:hover {
+    color: var(--text);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Media Queries)
+   Ajusta o layout para diferentes tamanhos de tela.
+   ========================================================================== */
+
+/* Tablets e notebooks pequenos */
+@media (max-width: 960px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .branding-side,
+    .login-side {
+        padding: 2rem 1.5rem;
+    }
+
+    .login-card {
+        padding: 32px;
+    }
+}
+
+/* Celulares (Esconde a arte e foca 100% no formulário) */
+@media (max-width: 768px) {
+    .branding-side {
+        display: none; /* Esconde o lado esquerdo */
+    }
+
+    .login-side {
+        flex: 1;
+        padding: 2rem 1rem;
+        background: var(--bg); /* Fundo mais leve no celular */
+    }
+
+    .login-card {
+        max-width: 100%;
+        border: none;
+        box-shadow: none;
+        background: transparent; /* Remove o card para parecer uma tela nativa app */
+    }
+}
