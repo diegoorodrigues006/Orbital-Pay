@@ -1,26 +1,48 @@
-# OrbitalPay - Sistema de Banking Digital
-O OrbitalPay é uma interface de autenticação moderna e responsiva para uma instituição financeira fictícia. O projeto foca em 
-oferecer uma experiência de usuário (UX) fluida, seguindo padrões de design bancário, com foco em segurança visual e 
-usabilidade.
-🛠️ Tecnologias Utilizadas
-HTML5: Estruturação semântica de múltiplas páginas.
-CSS3: Estilização avançada com variáveis nativas (:root), Flexbox para layouts complexos e responsividade para dispositivos
-móveis.
-JavaScript: Lógica de máscaras de entrada (CPF/Telefone) e simulação de feedback de carregamento no login.
-✨ Funcionalidades
-Página de Login: Interface limpa com validação visual de campos.
-Página de Cadastro: Fluxo completo para novos usuários com máscaras de dados em tempo real.
-Recuperação de Senha: Sistema de solicitação de instruções via CPF e E-mail.
-Responsividade Total: Adaptado para desktops, tablets e smartphones.
-Identidade Visual: Design moderno utilizando a paleta de cores institucional da OrbitalPay.
-📸 Demonstração
-//tela de login
-🚀 Como Executar o Projeto
-1.Clone o repositório:
-git clone https://github.com/seu-usuario/orbital-pay.git
-2. Abra o arquivo index.html no seu navegador de preferência.
-🏗️ Próximos Passos (Roadmap)
-Este projeto está em constante evolução. Os próximos marcos de desenvolvimento incluem:
-[ ] Integração com banco de dados (Node.js + PostgreSQL/MongoDB).
-[ ] Sistema real de autenticação e criptografia de senhas.
-[ ] Dashboard do usuário com saldo e extrato dinâmico.
+# 🚀 OrbitalPay - Sistema de Banking Digital
+
+O **OrbitalPay** é uma interface de autenticação moderna e responsiva para uma instituição financeira fictícia. O projeto foca em oferecer uma experiência de usuário (UX) fluida, seguindo padrões de design bancário.
+
+---
+
+## 📸 Demonstração do Projeto
+
+Aqui você pode ver o fluxo principal do sistema. As telas foram desenhadas para manter a consistência visual em toda a jornada do usuário.
+
+<table width="100%">
+  <tr>
+    <td align="center" width="50%">
+      <b>Página de Login</b><br>
+      <img src="img/login.png" width="100%" alt="Tela de Login">
+    </td>
+    <td align="center" width="50%">
+      <b>Página de Cadastro</b><br>
+      <img src="img/cadastro.png" width="100%" alt="Tela de Cadastro">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <b>Recuperação de Senha</b><br>
+      <img src="img/recuperar.png" width="50%" alt="Tela de Recuperação">
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **HTML5:** Estruturação semântica.
+* **CSS3:** Estilização com variáveis (`:root`), Flexbox e Responsividade.
+* **JavaScript:** Máscaras de entrada (CPF/Telefone) e interatividade.
+
+## ✨ Destaques
+- ✅ Máscaras de CPF e Telefone em tempo real.
+- ✅ Design responsivo (Desktop e Mobile).
+- ✅ Identidade visual consistente em todas as telas.
+
+## 🚀 Como Executar
+1. Clone o repositório.
+2. Abra o `index.html`.
+
+---
+*Este projeto foi desenvolvido para fins de estudo e portfólio.*
