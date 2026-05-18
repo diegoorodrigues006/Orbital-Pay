@@ -12,17 +12,17 @@ Aqui você pode ver o fluxo principal do sistema. As telas foram desenhadas para
   <tr>
     <td align="center" width="50%">
       <b>Página de Login</b><br>
-      <img src="img/tela-login-orbitalpay.jpg" width="100%" alt="Tela de Login">
+      <img src="tela-login-orbitalpay.jpg" width="100%" alt="Tela de Login">
     </td>
     <td align="center" width="50%">
       <b>Página de Cadastro</b><br>
-      <img src="img/criar-conta-orbitalpay.jpg" width="100%" alt="Tela de Cadastro">
+      <img src="criar-conta-orbitalpay.jpg" width="100%" alt="Tela de Cadastro">
     </td>
   </tr>
   <tr>
     <td align="center" colspan="2">
       <b>Recuperação de Senha</b><br>
-      <img src="img/recuperar-senha-orbitalpay.jpg" width="50%" alt="Tela de Recuperação">
+      <img src="recuperar-senha-orbitalpay.jpg" width="50%" alt="Tela de Recuperação">
     </td>
   </tr>
 </table>
